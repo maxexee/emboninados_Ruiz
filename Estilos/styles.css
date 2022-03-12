@@ -4,6 +4,9 @@
         --blanco-principal:   #FFFFFF;
         --negro-principal:    #000000;
         --amarillo-principal: #ffd414;
+        --header-nav:         #a29592;
+        --a-color:            #85716c;
+
 
         /*Fuentes*/
         --fuente-heading:   'PT Sans',  sans-serif;
@@ -28,7 +31,7 @@ body    {
 
 /*GLOBALES////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .contenedor {
-        max-width: 110rem;
+        max-width: 250rem;
         width: 95%;
         margin: 0   auto;
 }
@@ -51,5 +54,37 @@ img {max-width: 100%;}
 .no-padding {padding: 0;}
 .centrar-texto  {text-align: center;}
 
-/*SECCIÓN_1/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*HEADER/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.nav_header {
 
+    padding: 0.5rem;
+    background-color: var(--header-nav);
+    padding-bottom: 0.3rem  0   0.3rem  0;
+}
+
+.a_header   {
+    margin: 0  5rem  0   5rem;
+    padding: 0.2rem 0.4rem  0.2rem 0.4rem;
+    background-color: var(--a-color);
+    border-radius: 1rem;
+    color: var(--blanco-principal);
+}
+
+.h1_header  {
+    background-color: var(--negro-principal);
+    color: var(--amarillo-principal);
+}
+/*SERVICIOS/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.aside-servicios    {
+    
+}
+
+
+
+/*FOOTER/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.footer {
+    background-color: var(--negro-principal);
+    color:  var(--blanco-principal);
+    padding: 3.5rem   0   3.5rem    0;
+    font-size: 2rem;
+}
