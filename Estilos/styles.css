@@ -59,6 +59,10 @@ img {max-width: 100%;}
 .centrar-texto  {text-align: center}
 
 /*HEADER/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+header {
+    position: sticky;
+    top:0;
+}
 .nav_header {
 
     padding: 0.5rem;
