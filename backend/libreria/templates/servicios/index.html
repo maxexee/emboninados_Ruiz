@@ -26,7 +26,9 @@
                     <td>    {{ servicio.titulo }}    </td><!--TITULO-->
                     <td>    {{ servicio.descripcion }} </td><!--DESCRIPCIÓN-->
                     <td>    <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a> 
-                        | <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a> </td>
+                            | 
+                            <a name="" id="" class="btn btn-danger" href="{% url 'borrar'  servicio.id   %}" role="button">Borrar</a> 
+                    </td>
                 </tr>
                 {%   endfor   %}
             </tbody>
