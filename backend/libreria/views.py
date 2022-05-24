@@ -20,8 +20,13 @@ def crearS(request):
         return  redirect('servicios')
     return  render(request, 'servicios/crear.html', {'formulario':    formulario})
 
-def editarS(request):
-    return  render(request, 'servicios/editar.html')
+def editarS(request,    id):
+    ser         =   servicio.objects.get(id=id)
+    formulario  =   servicioForm(request.POST   or  None,   request.FILES   or  None,   instance=ser)
+    if  formulario.is_valid()   and request.POST:
+        formulario.save()
+        return  redirect('servicios')
+    return  render(request, 'servicios/editar.html',    {'formulario':  formulario})
 
 def borrarS(request,    id):
     libro   =   servicio.objects.get(id=id)
