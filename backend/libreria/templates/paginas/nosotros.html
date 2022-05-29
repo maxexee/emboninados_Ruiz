@@ -1,9 +1,266 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="libreria/templates/paginas/Estilos/styles.css">
+    <link rel="stylesheet" href="libreria/templates/paginas/Estilos/normalize.css">
+    <title>Embobinados RUiz</title>
+    <title>Document</title>
+</head>
+<body class="body">
+    <header id="header">
+        <nav    class="nav_header   centrar-texto">
+            <a class="a"    href="#">Sobre Nosotros</a>
+            <a class="a"    href="#productos__general">Productos</a>
+            <a class="a"    href="#servicios_general">Servicios</a>
+            <a class="a"    href="#galeria_general">Galeria</a>
+            <a class="a"    href="#">Contacto</a>
+        </nav>
+    </header>
+<!------------------------------------------------------------------------------------------------------------------>
+    <div    class="titulobg"   id="titulobg">
+        <!-- Explanation in JS tab -->
+        
+        <!-- The two texts -->
+        <div id="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        
+        <!-- The SVG filter used to create the merging effect -->
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                    <feColorMatrix in="SourceGraphic"
+                            type="matrix"
+                            values="1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+    <section>
+        <div    class="body contenedor  gridN"  id="gridN">
+            <div    class="años50   centrar-texto">
+                <img  class="años50__img"  src="recursos/50años.jpeg" alt="años">
+            </div>
+            <div  class="nosotros-text  ">
+                <p>
+                    Empresa 100% Mexicana, ubicada en Irapuato, Guanajuato. Cotnamos con 
+                    una trayectoria de más de 50 años de experiencia en el área de
+                    electricidad, con la constante de siempre actualzarnos para poder 
+                    brindar el mejor servicio.
+                </p>
+            </div>
+        </div>
+    
+        <div    class="contenedor   linea-sep"  id="productos__general"></div>
+    </section>
+<!------------------------------------------------------------------------------------------------------------------>
+    <section>
+        <div    class="contenedor   productos__general"><!--DIV GENERAL PARA PRODCUTOS-->
+            <!------------------------------------------MOTORES-->
+            <div    class="centrar-texto    productos__general--tituloM ">
+                <div>
+                    <h3 class="prod__titulos">Motores Electricos Reemsamblados</h3>
+                </div>
+            </div>
+            <div    class="productos__general--motores acomodo__productos">
+                <img src="/recursos/motor3-productos.svg" alt="motor3">
+                <img src="/recursos/motor1-productos.svg" alt="motor1">
+                <img src="/recursos/motor2-productos.svg" alt="motor2">
+            </div>
+            <div    class="despegable   prodcutos__btn__m no-margin">
+                <input class="prod_btn" type="button" value="Descripción">
+                <div    class="productos__general--b__des ">
+                     <p>Los motores sirven para...</p>
+                </div>
+            </div>
+            <!---------------------------------------ARRANCADORES-->
+            <div    class="centrar-texto    productos__general--tituloA">
+                <div    class="linea__sep--secc"></div>
+                <div>
+                    <h3 class="prod__titulos">Arrancadores Reemsamblados</h3>
+                </div>
+            </div>
+            <div    class="productos__general--arranc acomodo__productos">
+                <img src="/recursos/arrancador1-product.svg" alt="arranca1">
+                <img src="/recursos/arrancador2-product.svg" alt="arranca2">
+                <img src="/recursos/arrancador3-product.svg" alt="arranca3">
+            </div>
+            <div    class="despegable   prodcutos__btn__a   no-margin">
+                <input class="prod_btn" type="button" value="Descripción">
+                <div    class="productos__general--b__des ">
+                     <p>Los arrancadores sirven para...</p>
+                </div>
+            </div>
+            <!---------------------------------------TRANSFORMADORES-->
+            <div    class="centrar-texto    productos__general--tituloT">
+                <div    class="linea__sep--secc"></div>
+                <div>
+                    <h3 class="prod__titulos">Arrancadores Reemsamblados</h3>
+                </div>
+            </div>
+            <div    class="productos__general--transfor  acomodo__productos">
+                <img src="/recursos/transfo1-producto.svg" alt="tra1">
+                <img src="/recursos/transfo2-producto.svg" alt="tra2">
+                <img src="/recursos/transfo3-producto.svg" alt="tra3">
+            </div>
+            <div    class="despegable   prodcutos__btn__t   no-margin">
+                <input  class="prod_btn" type="button" value="Descripción">
+                <div    class="productos__general--b__des ">
+                     <p>Los tranformadores sirven para...</p>
+                </div>
+            </div>
+        </div><!--DIV GENERAL PARA PRODCUTOS-->
 
-{% block titulo %}  Nosotros  {% endblock %}
+        <div    class="contenedor   linea-sep"></div>
+    </section>
+<!------------------------------------------------------------------------------------------------------------------>
+    <section>
+        <div    class="contenedor   centrar-texto   servicios_general"  id="servicios_general"><!--DIV GENERAL PARA SERVICIOS-->
+            <h3 class="servicio servicio__izq ">Arrancadores</h3>
+            <h3 class="servicio">Compra y venta de motores y transformadores</h3>
+            <h3 class="servicio servicio__izq ">Equipos de bombeo y bombas sumergibles</h3>
+            <h3 class="servicio">Lineas de altatención y baja tensión</h3>
+            <h3 class="servicio servicio__izq ">Reparación de motores eléctricos</h3>
+            <h3 class="servicio">Subestaciones</h3>
+        </div>
 
-{% block contenido %}
+        <div    class="contenedor   linea-sep"></div>
+    </section>
 
-Sección de nosotros
+<!------------------------------------------------------------------------------------------------------------------>
+    <section>
 
-{% endblock %}
+        <div    class=" contenedor  galeria_general"    id="galeria_general">
+            <!--NÚMERO  1-->
+            <div    class="">
+                <img class="galaria__pic "   src="./recursos/gal2.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  2-->
+            <div    class="v-stretch">
+                <img class="galaria__pic "   src="./recursos/patron.png" alt="gal1"><!--V-->
+            </div>
+            <!--NÚMERO  3-->
+            <div    class="h-stretch">
+                <img class="galaria__pic "   src="./recursos/gal4.svg" alt="gal1"><!--H-->
+            </div>
+            <!--NÚMERO  4-->
+            <div    class="">
+                <img class="galaria__pic "   src="./recursos/gal5.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  5-->
+            <div>
+                <img class="galaria__pic "   src="./recursos/gal6.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  6-->
+            <div    class="v-stretch">
+                <img class="galaria__pic "   src="./recursos/gal7.svg" alt="gal1"><!--V-->
+            </div>
+            <!--NÚMERO  7-->
+            <div    class="big-stretch">
+                <img class="galaria__pic "   src="./recursos/gal2.svg" alt="gal1"><!--B-->
+            </div>
+            <!--NÚMERO  8-->
+            <div>
+                <img class="galaria__pic "   src="./recursos/gal1.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  9-->
+            <div    class="h-stretch">
+                <img class="galaria__pic "   src="./recursos/gal2.svg" alt="gal1"><!--H-->
+            </div>
+            <!--NÚMERO  10-->
+            <div    class="">
+                <img class="galaria__pic "   src="./recursos/gal3.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  11-->
+            <div    class="">
+                <img class="galaria__pic "   src="./recursos/gal4.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  12-->
+            <div    class="">
+                <img class="galaria__pic "   src="./recursos/gal5.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  13-->
+            <div    class="v-stretch">
+                <img class="galaria__pic "   src="./recursos/gal6.svg" alt="gal1"><!--V-->
+            </div>
+            <!--NÚMERO  14-->
+            <div    class="">
+                <img class="galaria__pic "   src="./recursos/gal7.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  15-->
+            <div    class="big-stretch">
+                <img class="galaria__pic "   src="./recursos/gal8.svg" alt="gal1"><!--B-->
+            </div>
+            <!--NÚMERO  16-->
+            <div    class="">
+                <img class="galaria__pic "   src="./recursos/gal1.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  17-->
+            <div    class="h-stretch">
+                <img class="galaria__pic "   src="./recursos/gal2.svg" alt="gal1"><!--H-->
+            </div>
+            <!--NÚMERO  18--><div    class="">
+                <img class="galaria__pic "   src="./recursos/gal3.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  19-->
+            <div    class="big-stretch">
+                <img class="galaria__pic "   src="./recursos/gal4.svg" alt="gal1"><!--B-->
+            </div>
+            <!--NÚMERO  20--><div    class="">
+                <img class="galaria__pic "   src="./recursos/gal5.svg" alt="gal1">
+            </div>
+            <!--NÚMERO  21--><div    class="">
+                <img class="galaria__pic "   src="./recursos/gal6.svg" alt="gal1">
+            </div>
+        </div>
+        <div    class="contenedor   linea-sep"></div>
+    </section>
+
+<!------------------------------------------------------------------------------------------------------------------>
+    <footer class="footer">
+        <div    class="contenedor   footer__div">
+            <div    class="footer__div--nombre">
+                <div    class="hijo__nombre">
+                    <h5 class="no-margin    no-padding">Embobinados Ruiz Contacto </h5>
+                </div>
+            </div>
+            <div class="footer__contactos">
+                <div    class="footer__div--telefonos">   
+                    <div    class="footer__generic">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                        </svg>  
+                        <h5> 01 (462) 627-99-08  </h5>     
+                    </div>
+                    
+                    <div    class="footer__generic">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                            <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+                        </svg> 
+                        <h5>462-149-01-03</h5>
+                    </div>
+                </div>
+                <div    class="footer__div--correo footer__generic">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <polyline points="3 7 12 13 21 7" />
+                    </svg>
+                    <h5>electroembobinadosruiz@hotmail.es</h5>
+                </div>
+            </div>
+        </div>    
+    </footer>
+    <script src="/home/maxexee/Documents/uni/pw/emboninados_Ruiz/backend/libreria/templates/paginas/js/titulo.js"></script>
+</body>
+</html>
